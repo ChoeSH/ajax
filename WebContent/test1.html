@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var arr=['dog','cat','fish'];
+
+for(var i=0; i<arr.length; i++){
+	console.log(arr[i]);
+}
+for(var i in arr){
+	console.log(arr[i]);
+}
+for(var animal of arr){
+	console.log(animal);
+}
+
+var ani1={
+	name:"강아지"
+}
+var animals=[ani1,{
+	name:"고양이"}];
+	
+alert(animals[0].name);
+alert(animals[1]['name']);	//2차원배열 구조
+
+</script>
+</body>
+</html>

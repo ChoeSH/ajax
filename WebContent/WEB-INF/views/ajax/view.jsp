@@ -34,9 +34,8 @@
 			<th>작성시간</th>
 			<td data-col="cretim"></td>
 		</tr>
-		<tr>
-		</tr>
 	</table>
+	<button onclick="goPage('/ajax/update?biNum=${param.biNum}')">수정하기</button>
 </div>
 <script>
 	window.onload = function(){

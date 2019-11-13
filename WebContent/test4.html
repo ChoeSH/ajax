@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<select id="sido"></select>
+	<input type="text" id="select">
+	<button onclick="selectSido()">선택</button>
+	<script>
+	function selectSido(){
+		sido.value = document.querySelector('#select').value
+	}
+var sidos=['서울','경기','강원','대전','부산'];
+
+var sido=document.querySelector('#sido');
+var html='<option value="">선택</option>';
+for(var sd of sidos){
+	html += '<option value="'+ sd +'">'+ sd +'</option>';
+}
+sido.innerHTML=html;
+</script>
+</body>
+</html>

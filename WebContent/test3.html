@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	이름:
+	<input type="text" id="name">
+	<br> 나이:
+	<input type="text" id="age">
+	<br> 주소:
+	<input type="text" id="addr">
+	<br>
+	<button onclick="clicks()">클릭</button>
+	<script>
+		var userInfo = {
+			name : '홍길동',
+			age : '33',
+			addr : '서울시 강서구'
+		}
+
+		function clicks() {
+
+			var inputs = document.querySelectorAll('[id]');
+			
+				for ( var i in inputs) {
+					inputs[i].value = userInfo[inputs[i].id];
+				}
+			
+			console.log(inputs);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<button>클릭</button>
+<br>
+<script>
+function click(){
+	alert("클릭하지마");
+}
+var btn = document.querySelector('button');
+btn.onclick=click;
+
+var b = click();	//click()을 실행한 결과를 b에 대입
+document.write(b);	//click()이 return하지 않으므로 결과는 undefined가 나온다.
+</script>
+</body>
+</html>
