@@ -12,14 +12,25 @@
 	function selectSido(){
 		sido.value = document.querySelector('#select').value
 	}
-var sidos=['서울','경기','강원','대전','부산'];
-
-var sido=document.querySelector('#sido');
-var html='<option value="">선택</option>';
-for(var sd of sidos){
-	html += '<option value="'+ sd +'">'+ sd +'</option>';
+	window.onload = function(){
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET','/test');
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4){
+				if(xhr.status==200){
+		var sidos = JSON.parse(xhr.responseText);
+		var sido=document.querySelector('#sido');
+		var html='<option value="">선택</option>';
+		for(var sd of sidos){
+			html += '<option value="'+ sd.sName +'">'+ sd.sName +'</option>';
+			}
+		sido.innerHTML = html;
+		}
+	}
 }
-sido.innerHTML=html;
+		xhr.send();
+	}
+
 </script>
 </body>
 </html>

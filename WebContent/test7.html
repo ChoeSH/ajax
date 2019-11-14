@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+test7
+<script>
+var xhr = new XMLHttpRequest();
+xhr.open('GET','/test');
+xhr.onreadystatechange=function(){
+	if(xhr.readyState==4){
+		if(xhr.status==200){
+			console.log(JSON.parse(xhr.responseText));
+			document.write(xhr.responseText);		//responseText는 xhr의 화면을 출력 text를 보여줌
+		}else{
+			document.write(xhr.responseText);
+		}
+	}
+}
+xhr.send();
+</script>
+</body>
+</html>
